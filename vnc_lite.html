@@ -72,6 +72,10 @@
         function disconnectedFromServer(e) {
             if (e.detail.clean) {
                 status("Disconnected");
+                const retry = readQueryVariable('retry', false);
+                if (retry) {
+                  window.location.reload();
+                }
             } else {
                 status("Something went wrong, connection is closed");
             }

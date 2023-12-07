@@ -19,6 +19,7 @@
     "vendor/pako"
   ],
   "scripts": {
+    "start": "npx static-server",
     "lint": "eslint app core po/po2js po/xgettext-html tests utils",
     "test": "karma start karma.conf.js",
     "prepublish": "node ./utils/convert.js --clean"
